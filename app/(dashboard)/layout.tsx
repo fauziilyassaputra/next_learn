@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function AdminLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <main>
-      <header className="border-b border-sky-500">Admin layout</header>
+      <header className="border-b border-green-500">Dashboard layout</header>
       {children}
     </main>
   );
