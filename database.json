@@ -12,5 +12,8 @@
       "slug": "post-2",
       "content": "content post 2"
     }
-  ]
+  ],
+  "settings": {
+    "siteName": "hoshimi blog"
+  }
 }
