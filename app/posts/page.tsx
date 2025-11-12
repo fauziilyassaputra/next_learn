@@ -1,8 +1,5 @@
-type post = {
-  id: string;
-  title: string;
-  content: string;
-};
+import Link from "next/link";
+import { post } from "../_types/post";
 
 async function getPosts(): Promise<post[]> {
   const res = await fetch("http://localhost:3001/post");
@@ -17,7 +14,7 @@ export default async function PostsPage() {
     <div className="">
       {posts.map((post) => (
         <article key={post.id}>
-          <h2>{post.title}</h2>
+          <Link href={`/posts/${post.slug}`}>{post.title}</Link>
         </article>
       ))}
     </div>
