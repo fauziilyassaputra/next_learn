@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 import { getSetting } from "./queries/getSetting";
 import { Nav } from "./nav";
 import { Suspense } from "react";
