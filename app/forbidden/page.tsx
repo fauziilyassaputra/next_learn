@@ -1,0 +1,3 @@
+export default function ForbiddenPage() {
+  return <h1>you are not allowed to access this page</h1>;
+}

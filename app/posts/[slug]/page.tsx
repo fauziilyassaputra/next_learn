@@ -1,5 +1,5 @@
 import { post } from "@/app/_types/post";
-import { createComment } from "@/app/actions";
+// import { createComment } from "@/app/actions";
 import { CommentForm } from "./comment-form";
 import { LikeButton } from "./like-button";
 import { Comments } from "./comment";
