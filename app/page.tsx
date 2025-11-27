@@ -1,7 +1,12 @@
 import Image from "next/image";
-import { Counter } from "./counter";
+// import { Counter } from "./counter";
 import anbyBoo from "@/public/anbyboo.png";
-import loading_bangboo from "@/public/paperboo-mini.png";
+import { Metadata } from "next";
+// import loading_bangboo from "@/public/paperboo-mini.png";
+
+export const metadata: Metadata = {
+  title: "Bangboo | Home",
+};
 
 export default function Home() {
   return (

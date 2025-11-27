@@ -2,6 +2,21 @@ import { post } from "@/app/_types/post";
 import { createComment } from "@/app/actions";
 import { CommentForm } from "./comment-form";
 import { LikeButton } from "./like-button";
+import { Comments } from "./comment";
+import { Suspense } from "react";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = await getPost(slug);
+
+  return {
+    title: post.title,
+  };
+}
 
 async function getPost(slug: string): Promise<post> {
   // http://localhost:3001/post?slug=post-1 => maka hanya objek pertama yang akan diambil
@@ -24,10 +39,12 @@ export default async function PostsPage({
         <h1 className="text-lg">{post.title}</h1>
         <div className="">{post.content}</div>
         <hr />
-        <LikeButton />
+        <LikeButton postID={post.id} />
       </article>
       <section className="mt-4">
-        <h2>Comments</h2>
+        <Suspense fallback="Loading comment...">
+          <Comments />
+        </Suspense>
         <CommentForm />
       </section>
     </>

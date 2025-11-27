@@ -1,7 +1,6 @@
 "use client";
 
 import { createComment } from "@/app/actions";
-import { error } from "console";
 import { useActionState } from "react";
 
 const initialState = {

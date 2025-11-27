@@ -5,9 +5,10 @@ import Link from "next/link";
 
 export function Nav() {
   return (
-    <nav>
+    <nav className="flex gap-4">
       <Link href="/">Home </Link>
       <Link href="/about">About </Link>
+      <Link href="/posts">posts </Link>
       <Link href="/about/team">team </Link>
     </nav>
   );
