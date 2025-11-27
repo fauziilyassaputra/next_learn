@@ -1,5 +1,7 @@
 import { post } from "@/app/_types/post";
 import { createComment } from "@/app/actions";
+import { CommentForm } from "./comment-form";
+import { LikeButton } from "./like-button";
 
 async function getPost(slug: string): Promise<post> {
   // http://localhost:3001/post?slug=post-1 => maka hanya objek pertama yang akan diambil
@@ -21,18 +23,12 @@ export default async function PostsPage({
       <article>
         <h1 className="text-lg">{post.title}</h1>
         <div className="">{post.content}</div>
+        <hr />
+        <LikeButton />
       </article>
       <section className="mt-4">
         <h2>Comments</h2>
-        <form action={createComment} className="flex flex-col w-72">
-          <textarea
-            name="comment"
-            id=""
-            placeholder="write your comment..."
-            className="border-2 border-black w-72 h-40 p-2"
-          ></textarea>
-          <button className="bg-blue-400">Send</button>
-        </form>
+        <CommentForm />
       </section>
     </>
   );
