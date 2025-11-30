@@ -15,6 +15,7 @@ async function getPosts(): Promise<post[]> {
 }
 
 export default async function PostsPage() {
+  // throw new Error("Error thrown in Home Page");
   const posts = await getPosts();
   return (
     <div className="">

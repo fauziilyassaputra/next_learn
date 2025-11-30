@@ -2,6 +2,7 @@ import Image from "next/image";
 // import { Counter } from "./counter";
 import anbyBoo from "@/public/anbyboo.png";
 import { Metadata } from "next";
+import { error } from "console";
 // import loading_bangboo from "@/public/paperboo-mini.png";
 
 export const metadata: Metadata = {
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  // throw new Error("Error thrown in Home Page");
   return (
     <div>
       <h1>Home</h1>

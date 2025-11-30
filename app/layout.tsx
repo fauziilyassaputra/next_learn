@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Source_Sans_3, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { getSetting } from "./queries/getSetting";
@@ -33,6 +32,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // throw new Error("Error thrown in Home Page");
   return (
     <html lang="en">
       <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
